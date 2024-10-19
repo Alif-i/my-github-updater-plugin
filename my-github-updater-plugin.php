@@ -16,7 +16,7 @@ function my_plugin_init_updater() {
     }
 
     $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-        'https://github.com/Alif-i/my-github-updater-plugin.git/', // GitHub repository URL.
+        'https://github.com/Alif-i/my-github-updater-plugin', // GitHub repository URL.
         __FILE__, // Full path to the main plugin file.
         'my-github-updater-plugin' // Plugin slug.
     );
@@ -35,5 +35,3 @@ function my_plugin_register_update_checker() {
     }
 }
 
-
-$fu="aaa";
