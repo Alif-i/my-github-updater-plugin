@@ -16,11 +16,11 @@ add_action('init', 'my_plugin_init_updater');
 function my_plugin_init_updater() {
     // Ensure the update checker class is available
     if (class_exists('Puc_v4_Factory')) {
-        $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-            'https://github.com/Alif-i/my-github-updater-plugin', // GitHub repository URL.
-            __FILE__, // Full path to the main plugin file.
-            'my-github-updater-plugin' // Plugin slug.
-        );
+$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
+    'https://github.com/Alif-i/my-github-updater-plugin', // Your GitHub repository URL.
+    __FILE__, // Full path to the main plugin file.
+    'my-github-updater-plugin' // Plugin slug.
+);
 
         // Optional: Set the branch that contains the stable release.
         $myUpdateChecker->setBranch('main'); // Change to 'main' or another branch if needed.
