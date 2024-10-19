@@ -1,10 +1,9 @@
 <?php
 /*
 Plugin Name: My GitHub Updater Plugin
-<<<<<<< HEAD
 Plugin URI: https://github.com/Alif-i/my-github-updater-plugin
 Description: A plugin that auto-updates from a GitHub repository.
-Version: 1.0.0
+Version: 1.0.1
 Author: Your Name
 */
 
