@@ -1,25 +1,23 @@
 <?php
 /*
 Plugin Name: My GitHub Updater Plugin
-Description: A simple WordPress plugin with GitHub update functionality.
+Plugin URI: https://github.com/Alif-i/my-github-updater-plugin
+Description: A plugin that auto-updates from a GitHub repository.
 Version: 1.0.0
 Author: Your Name
 */
 
-// Load the Plugin Update Checker library
-if ( !class_exists('Puc_v4_Factory') ) {
-    require_once plugin_dir_path(__FILE__) . 'plugin-update-checker/plugin-update-checker.php';
-}
+require 'plugin-update-checker/plugin-update-checker.php';
+use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
 
-// Initialize the update checker
-$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-    'https://github.com/Alif-i/my-github-updater-plugin', // Your GitHub repo URL
-    __FILE__, // Full path to the main plugin file
-    'my-github-updater-plugin' // Plugin slug
+$myUpdateChecker = PucFactory::buildUpdateChecker(
+	'https://github.com/Alif-i/my-github-updater-plugin/',
+	__FILE__,
+	'my-github-updater-plugin'
 );
 
-// Set the branch if you are using "main"
+//Set the branch that contains the stable release.
 $myUpdateChecker->setBranch('main');
 
-// Add debug output to view what’s happening with the update check
-$myUpdateChecker->addResultFilter('puc_debugResult');
+//Optional: If you're using a private repository, specify the access token like this:
+// -
