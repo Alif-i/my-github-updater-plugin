@@ -1,6 +1,7 @@
 <?php
 /*
 Plugin Name: My GitHub Updater Plugin
+<<<<<<< HEAD
 Plugin URI: https://github.com/Alif-i/my-github-updater-plugin
 Description: A plugin that auto-updates from a GitHub repository.
 Version: 1.0.0
@@ -18,6 +19,3 @@ $myUpdateChecker = PucFactory::buildUpdateChecker(
 
 //Set the branch that contains the stable release.
 $myUpdateChecker->setBranch('main');
-
-//Optional: If you're using a private repository, specify the access token like this:
-// -
