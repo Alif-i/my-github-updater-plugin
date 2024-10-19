@@ -2,7 +2,7 @@
 /*
 Plugin Name: My GitHub Updater Plugin
 Description: A simple WordPress plugin with GitHub update functionality.
-Version: 1.0.3
+Version: 1.0.0
 Author: Your Name
 */
 
