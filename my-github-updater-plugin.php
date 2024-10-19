@@ -34,6 +34,3 @@ function my_plugin_register_update_checker() {
         require plugin_dir_path(__FILE__) . 'plugin-update-checker/plugin-update-checker.php';
     }
 }
-
-
-$fu="aaa";
